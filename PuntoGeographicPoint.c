@@ -21,6 +21,13 @@ int xCan; //Candidatos a x
 int yCan; //Candidatos a y
 double radioRta;
 
+//Metodos
+void imprimirMapa(char s[]);
+double rad(int x0, int y0);
+double latitud(int x);
+double longitud(int y);
+void nCordenada();
+
 FILE *arc;
 int i = 0;
 int j = 0;
