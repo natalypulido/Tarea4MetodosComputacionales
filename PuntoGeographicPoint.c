@@ -76,5 +76,16 @@ if(arc){
 fclose(arc);      
          
 }
+//Retorna la latitud de ese punto en x
+double latitud(int x){
+       double xx = (double) x; 
+       double m = (-90.0/250)*xx + 90.0;
+       return m;
+       }
+double longitud(int y){
+       double yy = (double) y; 
+       double m = (360.0/744.0)*yy - 180.0;
+       return m;
+       } 
 
 }
