@@ -90,6 +90,31 @@ double rad(int x0, int y0){
 //                    printf("Radio = %f \n", memoria);
        return rta;
        }
+
+//Calcula un punto cercano al actual
+void nCordenada(){
+          double rx= ((double)rand()/RAND_MAX);     
+          double ry= ((double)rand()/RAND_MAX);     
+          xCan = xActual;
+          yCan = yActual;
+if(rx > 0.5){ //Decide si cambiar x o y
+           if(ry > 0.5){
+                 xCan += 1;
+                      }
+          else{
+               xCan -= 1;
+               }
+}
+else{
+          if(ry > 0.5){
+                yCan += 1;
+                }
+          else{
+               yCan -= 1;
+               }     
+               }          
+
+     }  
 	
 //Retorna la latitud de ese punto en x
 double latitud(int x){
