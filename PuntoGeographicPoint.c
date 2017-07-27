@@ -76,6 +76,21 @@ if(arc){
 fclose(arc);      
          
 }
+	
+//Calcula la distancia al punto más cercano en tierra
+double rad(int x0, int y0){
+       double rta = (double) RAND_MAX;
+       for(k = 0;k<totalTierra;k++){
+             memoria = sqrt( pow(((double) x0- (double) xT[k]),2) + pow(((double) y0-(double) yT[k]),2));
+
+             if(memoria<rta){
+                       rta = memoria;
+                       }
+             }
+//                    printf("Radio = %f \n", memoria);
+       return rta;
+       }
+	
 //Retorna la latitud de ese punto en x
 double latitud(int x){
        double xx = (double) x; 
