@@ -2,6 +2,8 @@
 
 PuntoNemo.pdf: Plots.py
 	python Plots.py
+Plots.py: resultados.txt
+	python resultados.txt
 resultados.txt: PuntoGeographicPoint.x
 	./PuntoGeographicPoint.x
 PuntoGeographicPoint.x: PuntoGeographicPoint.c
