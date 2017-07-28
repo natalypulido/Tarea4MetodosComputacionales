@@ -76,6 +76,21 @@ if(arc){
 fclose(arc);      
          
 }
+
+   double mem = 0;
+    int iteracion = 2000;
+	i = 0;
+	
+    double nuevo = 0;
+    double viejo = 0;
+    while(i<iteracion){
+          
+
+                 nCordenada();          
+          nuevo = rad(xCan,yCan);
+          viejo = rad(xActual,yActual);
+            double alpha = exp(nuevo - viejo);
+	    //COMPLETAR OJO
 	
 //Calcula la distancia al punto más cercano en tierra
 double rad(int x0, int y0){
