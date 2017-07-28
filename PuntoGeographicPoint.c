@@ -90,7 +90,26 @@ fclose(arc);
           nuevo = rad(xCan,yCan);
           viejo = rad(xActual,yActual);
             double alpha = exp(nuevo - viejo);
-	    //COMPLETAR OJO
+	  
+	     if(nuevo>radioRta){//Tener el del radio mas grande 
+                            xRta = xCan;
+                            yRta = yCan;
+                            radioRta = nuevo;                                      
+                                      }
+                   if(alpha > 1){
+                            alpha = 1;
+                            }
+                   mem = (double) rand()/RAND_MAX;
+                   if(alpha>mem){
+                                 xActual = xCan;
+                                 yActual = yCan;
+
+                                 }
+//                 printf("Iteracion %d : %d %d, %f\n", i, xRta, yRta,radioRta);
+//                 printf("Iteracion %d : %d %d, %f\n", i, xActual, yActual,radioRta);
+
+	i = i+1;
+          }
 	
 //Calcula la distancia al punto más cercano en tierra
 double rad(int x0, int y0){
