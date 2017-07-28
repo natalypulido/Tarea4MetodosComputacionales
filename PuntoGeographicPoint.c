@@ -110,6 +110,33 @@ fclose(arc);
 
 	i = i+1;
           }
+//Imprime los resultados para el .py
+// x y radio
+    FILE *apy =fopen("resultados.txt","w+");    
+    fprintf(apy,"%d %d %.2f",xRta, yRta, radioRta);
+
+
+printf("Las coordenadas del punto mas alejado son: %.3f %.3f\n", longitud(yActual), latitud(xActual));
+
+
+    
+}
+
+
+
+
+//Imprime el mapa
+void imprimirMapa(char s[]){
+    
+    FILE *arch =fopen(s,"w+");    
+    for(i = 0;i<alto;i++){
+      for(j = 0;j<largo;j++){
+            fprintf(arch,"%d ",mapa[i][j]);
+            }
+            fprintf(arch,"\n");
+    } 
+    
+}
 	
 //Calcula la distancia al punto más cercano en tierra
 double rad(int x0, int y0){
